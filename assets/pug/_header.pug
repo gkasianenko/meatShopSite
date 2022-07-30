@@ -1,0 +1,68 @@
+include ./libs/_libs
+
+.nav-wrapper
+    nav.navbar
+        .container
+
+            .navbar__social
+                span.social Follow us
+                include ./blocks/_socials
+
+            .navbar__logo
+                a.logo(href="./index.html")
+                    +image("logo_bubulla", "png")
+
+            .navbar__icons
+                ul
+                    li.navbar__icon
+                        a(href="#")
+                            span(class=["fa", "fa", "fa-user"])
+                    //- li.navbar__icon
+                    //-     .cart-navbar
+                    //-         a(href="#")
+                    //-             i(class=["fa", "fa" ,"fa-shopping-cart"])
+                    //-             span.cart-navbar__contents 0
+                    li.navbar__icon
+                        a(href="#")
+                            span(class=["fa", "fa", "fa-search"])
+                    
+            #navbar
+                ul.navbar__menu
+                    li.menu__item
+                        a(href="#popular-products")
+                            span(class="menu-link") Каталог
+                    li.menu__item
+                        a(href="#footer")
+                            span(class="menu-link") Контакты
+                        //- ul.menu__sub-menu
+                        //-     li
+                        //-         a(href="#")
+                        //-             span Testimonials
+                        //-     li
+                        //-         a(href="#")
+                        //-             span Our team
+                        //-     li
+                        //-         a(href="#")
+                        //-             span FAQ
+                        //-     li
+                        //-         a(href="#")
+                        //-             span(class="menu-link") Gallery
+                        //-         ul.menu__sub-menu
+                        //-             li
+                        //-                 a(href="#")
+                        //-                     span Dropdown 1
+                        //-             li
+                        //-                 a(href="#")
+                        //-                     span Dropdown 2
+                        //-             li
+                        //-                 a(href="#")
+                        //-                     span FAQ
+                    li.menu__item.header-apply
+                        a(href="#")
+                            span(class="menu-link") Сделать заказ
+                    
+            .navbar__controls
+                button(class="navbar__toggle")
+                    span.icon__bar-top
+                    span.icon__bar-middle
+                    span.icon__bar-bottom

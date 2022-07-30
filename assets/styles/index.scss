@@ -1,0 +1,26 @@
+//Глобальные
+@import "global";
+@import "media";
+
+//Шрифты
+@import "utilities/fonts";
+
+//Bootstrap grid
+@import "~bootstrap/scss/bootstrap-grid";
+
+//Sections
+@import "sections/modal-apply";
+@import "sections/header-nav";
+@import "sections/nav-mobile";
+@import "sections/header-img";
+@import "sections/benefits";
+@import "sections/category-slider";
+@import "sections/banners";
+@import "sections/quality";
+@import "sections/sign";
+@import "sections/popular-products";
+@import "sections/articles";
+@import "sections/footer";
+
+//Blocks
+@import "blocks/socials";

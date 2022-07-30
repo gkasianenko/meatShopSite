@@ -1,0 +1,66 @@
+include ./libs/_libs
+
+section.articles 
+    .container
+        .articles__title
+            .articles__category
+                p наш блог
+            h3(class="title-h4") Недавнее в телеграм
+        .articles__wrapper
+            .articles__left(class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-ms-12 col-xs-12")
+                a(href="#") 
+                    article.article-item
+                        .article__img
+                            +image("bg-article-left", "png")
+                            .article__title 
+                                span 09 Dec, 21
+                                h4(class="title-h4") What you need to know about steaks: types of steaks
+            .articles__right 
+                article.article-item(class="col-lg-6 col-md-6 col-sm-12 col-ms-12 col-xs-12")
+                    a(href="#") 
+                        .article__img
+                            +image("bg-article-right1", "png")
+                            div.article_badge 
+                                span(class="title-h3") 08
+                                p Dec, 21
+                        .article__desc 
+                            .article__category
+                                a(href="#")
+                                    p Pork 
+                            .article__name
+                                a(href="#")
+                                    h4(class="title-h3") The principles of storage for different types of meat
+                            .article__text  
+                                p Morbi volutpat nisi a ligula vestibulum placerat. Suspendisse venenatis pulvinar nibh sed convallis. Cras elementum nunc a purus sodales tin...
+                        .article__data
+                            .article__comments
+                                a(href="#")
+                                    <i class="fa-solid fa-comments"></i>
+                                    p 0 comments
+                            .article__views
+                                <i class="fa-solid fa-eye"></i>
+                                p 22 views
+                article.article-item(class="col-lg-6 col-md-6 col-sm-12 col-ms-12 col-xs-12")
+                    a(href="#")
+                        .article__img
+                            +video("meat", "mp4")
+                            div.article_badge 
+                                span(class="title-h3") 22
+                                p Dec, 21
+                        .article__desc 
+                            .article__category
+                                a(href="#")
+                                    p Pork 
+                            .article__name
+                                a(href="#")
+                                    h4(class="title-h3") The principles of storage for different types of meat
+                            .article__text  
+                                p Morbi volutpat nisi a ligula vestibulum placerat. Suspendisse venenatis pulvinar nibh sed convallis. Cras elementum nunc a purus sodales tin...
+                        .article__data
+                            .article__comments
+                                a(href="#")
+                                    <i class="fa-solid fa-comments"></i>
+                                    p 0 comments
+                            .article__views
+                                <i class="fa-solid fa-eye"></i>
+                                p 22 views

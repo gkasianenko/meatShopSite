@@ -1,0 +1,22 @@
+.socials {
+  z-index: 100;
+}
+
+.socials ul {
+  display: flex;
+}
+
+.socials a {
+  font-size: 16px;
+  padding: 12px;
+
+  cursor: pointer;
+
+  color: $primaryColor;
+  transition: color 0.2s ease-in;
+}
+
+.socials a:hover {
+  color: $thirdColor;
+  transition: color 0.2s ease-in;
+}

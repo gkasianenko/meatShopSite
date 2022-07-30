@@ -1,0 +1,266 @@
+.articles {
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  background-color: #0e0d0c;
+}
+
+.articles__wrapper {
+  display: flex;
+
+  @media (max-width: $desktop-sm) {
+    flex-direction: column;
+  }
+}
+
+.articles__wrapper > * + * {
+  @media (max-width: $desktop-sm) {
+    margin-top: 30px;
+  }
+}
+
+.articles__title {
+  color: $primaryColor;
+  text-align: center;
+  margin-bottom: 50px;
+
+  & .articles__category {
+    color: $secondaryColor;
+    font-family: categoryFont;
+    font-size: 36px;
+
+    line-height: 1em;
+  }
+}
+
+.articles__right {
+  display: flex;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+}
+
+.articles__right > * + * {
+  @media (max-width: $mobile) {
+    margin-top: 50px;
+  }
+}
+
+.articles__left {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.article-item {
+  transition: all 0.3s ease-in-out;
+
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    filter: brightness(85%);
+  }
+}
+
+.article-item:hover > .article__img img {
+  transform: rotate(5deg) scale(1.15);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.article-item:hover > a > .article__img img {
+  transform: rotate(5deg) scale(1.15);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.article-item:hover > a > .article__img video {
+  transform: rotate(5deg) scale(1.15);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.article__img {
+  position: relative;
+  min-height: 232px;
+  overflow: hidden;
+
+  & video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 116%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    object-fit: cover;
+  }
+}
+
+.articles__right .article__img {
+  max-height: 232px;
+  height: 100%;
+
+  @media (max-width: $tablet) {
+    height: 232px;
+  }
+
+  @media (max-width: $mobile) {
+    min-height: 432px;
+  }
+}
+
+.articles .article__title {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  right: 50px;
+
+  color: $primaryColor;
+
+  & a {
+    color: $primaryColor;
+  }
+
+  & span {
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  @media (max-width: 517px) {
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+
+    h4 {
+      font-size: 24px;
+    }
+  }
+}
+
+.article_badge {
+  display: inline-block;
+  padding: 14px 16px 10px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  font-weight: 900;
+  text-align: center;
+
+  color: $primaryColor;
+  background-color: $secondaryColor;
+
+  & span {
+    display: block;
+  }
+}
+
+.article__desc {
+  margin-top: 15px;
+
+  border-bottom: 3px solid rgba(255, 255, 255, 0.18);
+}
+
+.article__category {
+  transition: all 0.3s ease-in-out;
+  & a {
+    color: $secondaryColor;
+    transition: all 0.3s ease-in-out;
+  }
+
+  & a:hover {
+    color: $thirdColor;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.article__desc > * + * {
+  margin-top: 10px;
+}
+
+.article__name {
+  transition: all 0.3s ease-in-out;
+  a {
+    color: $primaryColor;
+    transition: all 0.3s ease-in-out;
+  }
+
+  & a:hover {
+    color: $thirdColor;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.article__text {
+  font-size: 14px;
+  opacity: 0.8;
+
+  text-overflow: ellipsis;
+  margin-bottom: 20px;
+}
+
+.article__data {
+  display: flex;
+  padding-top: 15px;
+  transition: all 0.3s ease-in-out;
+  font-size: 12px;
+
+  & a {
+    color: $primaryColor;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+  }
+
+  & a:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.article__data > * + * {
+  margin-left: 20px;
+}
+
+.article__views {
+  display: flex;
+  align-items: center;
+
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  & i {
+    color: $secondaryColor;
+  }
+}
+
+.article__comments {
+  & a {
+    display: flex;
+    align-items: center;
+  }
+
+  & i {
+    color: $secondaryColor;
+  }
+}
+
+.article__comments a > * + * {
+  margin-left: 6px;
+}
+
+.article__views > * + * {
+  margin-left: 6px;
+}

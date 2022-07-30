@@ -1,0 +1,24 @@
+include ./libs/_libs
+
+
+section.quality
+    .container
+        .quality__wrapper
+            .quality__left
+                .quality__left-wrapper
+                    .quality__left-title
+                        h3(class="title-h2") Контроль на каждом этапе<br><span>Качество - наш приоритет</span>
+                    .quality__left-icons
+                        each val, key in {"icon-temper": "Контроль<br>температуры", "icon-lab": "Лабораторные<br>проверки", "icon-antibact": "Стерильность<br>на всем пути"}
+                            .quality__icon(class=" col-lg-3 col-md-3 col-sm-3 col-ms-3 col-xs-6")
+                                +image(`${key}`, "png")
+                                h6(class="title-h5") !{val}
+                    .quality__left-info
+                        p Безопасность наших клиентов и стерильность поставляемой продукции - вот фундамент на котором наша компания строит все свои бизнес процессы.
+                    .quality__left-button
+                        a(class="button button--secondary") 
+                            span Заказать доставку
+            .quality__right
+                +image("meat-article", "png")
+                .stamp
+                    +image("stamp", "png")

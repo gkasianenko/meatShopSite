@@ -1,0 +1,6 @@
+mixin image(name, format)
+    img(src=`./images/${name}.${format}` alt=name)
+
+mixin video(name, format)
+    video(loop="true" autoplay="autoplay" muted width="356px" height="232px")
+        source(src=`./videos/${name}.${format}` alt=name type=`video/${format}`)

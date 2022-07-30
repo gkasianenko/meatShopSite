@@ -1,0 +1,138 @@
+.sign {
+  margin-bottom: 60px;
+  margin-top: 60px;
+
+  height: 640px;
+
+  @media (max-width: $desktop) {
+    height: 460px;
+  }
+
+  @media (max-width: $tablet) {
+    min-height: 920px;
+  }
+
+  @media (max-width: $mobile) {
+    min-height: 460px;
+  }
+}
+
+.sign__wrapper {
+  display: flex;
+
+  width: 100%;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+}
+
+.sign__left {
+  width: 50%;
+  height: 640px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(../images/bg-sign.png);
+
+  @media (max-width: $desktop) {
+    height: 460px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.sign__left-content {
+  max-width: 640px;
+}
+
+.sign__left-content > * + * {
+  margin-top: 60px;
+}
+
+.sign__left-quote {
+  font-size: 30px;
+  font-weight: 800;
+
+  color: $primaryColor;
+
+  & span {
+    color: $thirdColor;
+  }
+
+  @media (max-width: $mobile) {
+      font-size: 24px;
+  }
+}
+
+.sign__left-author {
+   
+  font-size: 18px;
+  font-weight: 800;
+  color: $secondaryColor;
+
+  @media (max-width: $desktop-sm) {
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    
+    text-align: center;
+    
+  }
+}
+
+.sign__left-author > * + * {
+  margin-top: 15px;
+}
+
+.sign__right {
+  position: relative;
+  width: 50%;
+  height: 640px;
+  background-image: url(../images/butcher.jpg);
+  background-size: auto 125%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+
+  @media (max-width: $desktop) {
+    height: 460px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    background-size: auto 155%;
+    background-position: top left;
+  }
+
+  @media (max-width: $mobile) {
+      display: none;
+  }
+}
+
+.sign__right-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding: 66px 55px;
+  color: $thirdColor;
+  text-align: center;
+
+  background-color: $secondaryColor;
+  background-image: url(../images/bg-waves.png);
+
+  & span {
+    color: $primaryColor;
+  }
+}

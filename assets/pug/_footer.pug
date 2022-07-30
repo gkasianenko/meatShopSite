@@ -1,0 +1,27 @@
+include ./libs/_libs
+
+.footer__wrapper
+    .footer__subscribe
+        .subscribe-block
+            .subscribe__message
+                +image("letter-footer","png") 
+                h4 <span>Подпишитесь</span> на новости
+            .subscribe__input
+                form#newsletter
+                    input(placeholder="Your email...")
+                    label
+                    button(class="button button--secondary")
+                        span Подписаться
+    .footer__info(class="col-md-6")
+        .footer__logo
+            a(class="logo")
+                +image("logo_bubulla", "png")
+        .footer__text
+            p Поварскому делу можно научиться, но хорошо жарить мясо — это талант который спит в каждом.
+        .footer__contacts
+            .footer__address 
+                p г. Краснодар, ул. Архитектора Ишунина, 6
+            .footer__phone
+                a(href="tel:89385554855") 8 (938) 555 48 55
+        .socials
+            include ./blocks/_socials

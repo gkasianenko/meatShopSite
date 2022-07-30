@@ -1,0 +1,44 @@
+include ./libs/_libs
+
+#nav-mobile 
+    .nav-mobile__header
+        .navbar__logo
+                a.logo(href="./index.html")
+                    +image("logo_bubulla", "png")
+        button.nav-mobile__close
+            span.close
+    ul.nav-mobile__menu
+        li.menu-item.nav-header-apply
+            a(href="#")(class="no-submenu")
+                span Сделать заказ            
+        li.menu-item
+            a(href="#popular-products")(class="no-submenu")
+                span Каталог
+            //- ul.sub-menu
+            //-     li
+            //-         a(href="#")
+            //-             span Testimonials
+            //-     li
+            //-         a(href="#")
+            //-             span Our team
+            //-     li
+            //-         a(href="#")
+            //-             span FAQ
+            //-     li(class="menu-item")
+            //-         a(href="#")
+            //-             span(class="menu-link") Gallery
+            //-         ul.sub-menu
+            //-             li
+            //-                 a(href="#")
+            //-                     span Dropdown 1
+            //-             li
+            //-                 a(href="#")
+            //-                     span Dropdown 2
+            //-             li
+            //-                 a(href="#")
+            //-                     span FAQ
+        li.menu-item
+            a(href="#footer")(class="no-submenu")
+                span Контакты
+      
+        

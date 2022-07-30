@@ -1,0 +1,42 @@
+include ./libs/_libs
+
+.modal-apply
+    .modal-apply__left
+        +image("butcher","jpg")
+    .modal-apply__right
+        form(id="apply")
+            .modal-logo 
+                +image("logo_bubulla", "png")
+            .modal-inputs
+                .modal-selection
+                    p Какой стейк: 
+                    select(class="form-select")(aria-label="Default select example" required )
+                        option(selected) Выберите стейк
+                        option(value="1") РИБАЙ
+                        option(value="2") СТРИПЛОИН
+                        option(value="3") ЧАКРОЛ
+                        option(value="4") ПИКАНЬЯ
+                        option(value="5") ДРУГОЙ ОТРУБ
+                .modal-selection
+                    p Cколько стейков (~300гр/шт):
+                    label(for="quantity")
+                    input(name="quantity" type="text" id="quantity" placeholder="Количество стейков")
+                .modal-selection
+                    p Адрес доставки:
+                    label(for="address")
+                    input(name="address" type="text" id="address" placeholder="Введите адрес")
+                .modal-selection
+                    p Номер телефона:
+                    label(for="phone")
+                    input(name="phone" type="text" id="phone" placeholder="Введите телефон")
+                .modal-selection
+                    p Ваше имя:
+                    label(for="name")
+                    input(name="name" type="text" id="name" placeholder="Введите имя")
+            .modal-button 
+                button.button.button--secondary 
+                    span Отправить
+            .modal-close 
+                div.close
+                    +image("crest-black", "svg")
+        

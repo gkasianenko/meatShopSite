@@ -1,0 +1,217 @@
+//ЦВЕТА
+$primaryColor: white;
+$secondaryColor: #8f212e;
+$thirdColor: #bda881;
+$bg-color: #191716;
+
+//ЗАГОЛОВКИ
+.title-h2 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2em;
+  letter-spacing: 2px;
+}
+
+.title-h4 {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.title-h3 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.title-h5 {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.title-huge {
+  font-size: 100px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+//КНОПКИ
+.button {
+  padding: 26px 82px 26px 65px;
+  line-height: 1.4em;
+  min-width: 200px;
+  font-size: 16px;
+  border-radius: 48px;
+
+  cursor: pointer;
+
+  span {
+    position: relative;
+  }
+}
+
+.button--secondary {
+  position: relative;
+  background-color: $thirdColor;
+  color: $bg-color;
+
+  transition: all 0.3s ease-in-out;
+
+  & span::after {
+    content: "+";
+    position: absolute;
+    top: -4px;
+    right: -40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+
+    width: 30px;
+    height: 30px;
+
+    line-height: 1;
+    font-size: 34px;
+  }
+
+  &:hover > span:after {
+    transform: rotate(90deg);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+a.button {
+  display: inline-block;
+}
+
+/* Reset and base styles  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%; /* sticky footer */
+}
+
+body {
+  height: 100%; /* sticky footer */
+  display: flex; /* sticky footer */
+  flex-direction: column; /* sticky footer */
+  margin: 0 !important;
+  font-family: generalFont, sans-serif !important;
+
+  color: white;
+  background-color: $bg-color !important;
+  scroll-behavior: smooth;
+}
+
+body p {
+  line-height: 1.3em;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+body > * {
+  flex-shrink: 0; /* sticky footer */
+}
+
+a {
+  text-decoration: none;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 101;
+}
+
+#overlay.active {
+  display: block;
+}
+
+.error {
+  color: red;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+  padding: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Grid styles */
+
+.container {
+  max-width: 1570px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Utility */
+
+.none {
+  display: none !important;
+}
+
+/* Sticky Footer */
+
+.footer {
+  margin-top: auto; /* sticky footer */
+}

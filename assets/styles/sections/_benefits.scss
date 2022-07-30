@@ -1,0 +1,144 @@
+.benefits .container {
+  @media (max-width: $mobile) {
+    padding: 0;
+  }
+}
+
+.benefits__wrapper {
+  position: relative;
+  background-color: $secondaryColor;
+}
+
+.benefits__row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 70px;
+}
+
+.benefit__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: 0.3s all ease-in-out;
+
+  & img {
+    padding-top: 20px;
+    transition: 0.2s all ease-in-out;
+    width: 100px;
+    height: 120px;
+
+    color: $thirdColor;
+  }
+
+  & h6 {
+    font-size: 18px;
+
+    @media (max-width: $mobile) {
+      min-height: 108px;
+    }
+
+    @media (max-width: 380px) {
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 328px) {
+      min-height: 135px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    min-height: 260px;
+  }
+
+  @media (max-width: $mobile) {
+    min-height: 180px;
+  }
+}
+
+.benefit__item > * + * {
+  margin-top: 20px;
+}
+
+.benefits__row > * + * {
+  border-left: 3px solid rgba(255, 255, 255, 0.1);
+
+  @media (max-width: $mobile) {
+    border-left: none;
+  }
+}
+
+.benefit__item:hover > img {
+  padding-top: 0;
+
+  @media (max-width: $mobile) {
+    padding-top: 20px;
+  }
+}
+
+.benefits__btn-order {
+  position: absolute;
+  top: -14%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  & h6 {
+    font-size: 20px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    color: #191716;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $bg-color;
+      color: $secondaryColor;
+      transition: background-color 0.3s 0.3s ease-out, color 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      right: 0%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &::before {
+      @media (max-width: 603px) {
+        height: 100px !important;
+      }
+    }
+  }
+
+  .button--secondary {
+    @media (max-width: 603px) {
+      & span::after {
+        top: 6px;
+      }
+    }
+  }
+
+  .button::before {
+    content: "";
+    width: 300px;
+    height: 80px;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    display: inline-block;
+    background-color: $primaryColor;
+    transition: all 0.3s ease-in-out;
+  }
+
+  @media (max-width: $tablet) {
+    top: -5%;
+  }
+}

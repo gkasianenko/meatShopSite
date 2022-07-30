@@ -1,0 +1,25 @@
+include ./libs/_libs
+
+section.category-slider
+    .container
+        .category-slider__header
+            .category-slider__title
+                h2(class="title-h2") Мясная продукция на натуральных кормах<br> <span>от лучших животноводов Кубани</span>
+            .category-slider__info 
+                p Наша команда искренне верит что вкусный стейк начинается еще в семенах кормов. Поэтому мы тщательно отбираем поставщиков которые следят за производством на своих фермах начиная от кормов, и заканчивая генетикой своего поголовья.
+        .category-slider__main
+            .swiper
+                .swiper-wrapper
+                     each val, key in {"steak": "Говяжьи стейки", "sausage": "Готовая продукция", "ribs": "Барашек"}
+                        .swiper-slide
+                            a(href="#")
+                                span 
+                                    +image(`${key}`, "png")
+                                h6(class="title-h3") !{val}
+                .swiper-nav
+                    .swiper-button-prev
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    .swiper-button-next
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                
+
