@@ -6,9 +6,9 @@ $c = true;
 // For POST method only!
 
 // Save Basic Form parametrs
-$project_name = trim($_POST["Фонд Со-единение"]);
-$admin_email  = trim($_POST["Ilya.s.abramov@gmail.com"]);
-$email_from  = trim($_POST["info@soedinenie.ru"]);
+$project_name = "Steakstore";
+$admin_email  = "ilya.s.abramov@gmail.com";
+$email_from  = "info@steakstore.ru";
 // $form_subject = trim($_POST["form_subject"]);
 
 // Serialize form fields - that filled-in by User
@@ -42,7 +42,7 @@ function adopt($text) {
 	return '=?UTF-8?B?'.base64_encode($text).'?=';
 }
 
-$form_subject = 'Заявка с сайта Portfolio';
+$form_subject = 'Заявка ЖАР';
 
 // Preparing header
 $headers = "MIME-Version: 1.0" . PHP_EOL .
