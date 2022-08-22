@@ -74,6 +74,15 @@
 }
 
 .product-item .product__info {
+  & a {
+    min-height: 65px;
+    display: block;
+
+    @media (max-width: $desktop-sm) {
+      min-height: 87px;
+    }
+  }
+
   & h6 {
     color: $primaryColor;
   }
@@ -164,6 +173,7 @@
 
   @media (max-width: $tablet) {
     width: 160px;
+    display: none;
   }
 
   @media (max-width: $mobile) {
@@ -196,6 +206,8 @@
 .popular-products .product-info__price {
   display: flex;
   justify-content: center;
+
+  margin-top: 10px;
 }
 
 .popular-products .product-info__price > * + * {
