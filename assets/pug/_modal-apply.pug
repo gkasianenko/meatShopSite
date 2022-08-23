@@ -9,16 +9,11 @@ include ./libs/_libs
                 +image("logo_bubulla", "png")
             .modal-inputs
                 .modal-selection
-                    p Какой стейк: 
-                    select(class="form-select")(aria-label="Default select example" required )
-                        option(selected) Выберите стейк
-                        option(value="1") РИБАЙ
-                        option(value="2") СТРИПЛОИН
-                        option(value="3") ЧАКРОЛ
-                        option(value="4") ПИКАНЬЯ
-                        option(value="5") ДРУГОЙ ОТРУБ
+                    p Какой стейк:
+                    label(for="steak")
+                    input(name="steak" type="text" id="steak" placeholder="Какой стекйк")
                 .modal-selection
-                    p Cколько стейков (~300гр/шт):
+                    p Cколько грамм:
                     label(for="quantity")
                     input(name="quantity" type="text" id="quantity" placeholder="Количество стейков")
                 .modal-selection
