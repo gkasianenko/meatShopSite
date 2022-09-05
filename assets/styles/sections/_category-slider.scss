@@ -81,15 +81,11 @@
 }
 
 .swiper-nav {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 
   margin-top: 50px;
-
-  @media (max-width: $desktop-sm) {
-    display: flex;
-  }
 }
 
 .swiper-nav > * + * {
